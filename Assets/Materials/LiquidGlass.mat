@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LiquidGlass
+  m_Shader: {fileID: 4800000, guid: 5505d95d5dc78b649a7fbf6671f8bcaf, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BigBlur:
+        m_Texture: {fileID: 8400000, guid: 231b78de6a37c20418384802722060f5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmallBlur:
+        m_Texture: {fileID: 8400000, guid: b86b8c1bd05633b45837f68b3fed5c4b, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _A: 0.02
+    - _B: 0.99
+    - _ColorMask: 15
+    - _DPR: -1.72
+    - _DispGain: 7
+    - _EdgeSaturation: 2
+    - _EnableExternalAlpha: 0
+    - _FresnelHardness: 0.2
+    - _FresnelIntensity: 0.2
+    - _FresnelRange: 30
+    - _GlareAngle: 98.9
+    - _GlareConvergence: 0.5
+    - _GlareHardness: 0.2
+    - _GlareIntensity: 0.9
+    - _GlareOppositeFactor: 0.8
+    - _GlareRange: 30
+    - _Height: 400
+    - _PosX: -192.4
+    - _PosY: 0
+    - _Radius: 200
+    - _Range: 1
+    - _ReflectionFactor: 14
+    - _ScreenHeight: 1080
+    - _ScreenWidth: 1920
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _SuperEllipseFactor: 2
+    - _Thickness: 20
+    - _UIMaskSoftnessX: 1
+    - _UIMaskSoftnessY: 1
+    - _Width: 400
+    - _ZWrite: 0
+    m_Colors:
+    - _ClipRect: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Range: {r: 0.96, g: 0.8, b: 0, a: 0}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Size: {r: 35, g: 6, b: 0, a: 0}
+    - _Tint: {r: 1, g: 1, b: 1, a: 0.08627451}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

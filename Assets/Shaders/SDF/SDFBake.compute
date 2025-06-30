@@ -1,0 +1,39 @@
+#pragma kernel BakeSDF
+
+static const float _ScreenHeight = 1080;
+static const float _ScreenWidth = 1920;
+static const float _Width = 700;
+static const float _Height = 700;
+static const float _PosX = 0;
+static const float _PosY = 0;
+static const float _Radius = 200;
+static const float _SuperEllipseFactor = 2;
+
+struct Element
+{
+    float2 Pos;
+    float2 Size;
+    float Radius;
+    float SuperEllipseFactor;
+};
+
+RWTexture2D<float4> _Result;
+
+StructuredBuffer<Element> _SDFBuffer;
+int _SDFBufferSize;
+
+#include "Assets/Shaders/LiquidGlass/SDF.cginc"
+
+float2 remap(float2 v, float minOld, float maxOld, float minNew, float maxNew) {
+    return float2(minNew + (v.x-minOld) * (maxNew - minNew) / (maxOld-minOld), minNew + (v.y-minOld) * (maxNew - minNew) / (maxOld-minOld));
+}
+
+[numthreads(8, 8, 1)]
+void BakeSDF (uint3 id: SV_DispatchThreadID)
+{
+	float2 Screen = float2(_ScreenWidth, _ScreenHeight);
+	float2 NewUV = remap(id.xy/Screen, 0., 1., -1., 1.)*Screen;
+	float merged = mainSDF(NewUV);
+	float2 normal = getNormal(NewUV);
+	_Result[id.xy] = float4(merged, normal, 1.0);
+}
